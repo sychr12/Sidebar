@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
+:root{
+    --color-barra-lateral: rgba(225,225,225);
+    --color-texto: rgba(0,0,0);
+    --color-texto-menu:rgb(134,136,144);
+    --color-menu-hover: rgba(238,238,238);
+    --color-menu-hover-texto: rgba(0,0,0);
+    --color-botão: rgba(0,0,0);
+    --color-botão-texto:rgb(225,225,225);
+
+    --color-linea:rgb(241,241,241);
+    --color-switch-base :rgb(201,202,206);
+    --color-switch-circulo:rgb(241,241,241);
+
+
+}
+.dark-mode{
+    --color-barra-lateral: rgba(44,45,49);
+    --color-texto: rgb(255, 255, 255);
+    --color-texto-menu:rgb(110,110,117);
+    --color-menu-hover: rgba(0,0,0);
+    --color-menu-hover-texto: rgba(238,238,238);
+    --color-botão: rgba(238,238,238);
+    --color-botão-texto:rgb(0, 0, 0);
+    --color-linea:rgb(71,70,78);
+    --color-switch-base :rgb(0, 0, 0);
+    --color-switch-circulo:rgb(255,255,255);
+
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.barra-lateral{
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;;
+    background-color: var(--color-barra-lateral);
+
+    transition: width 0.5s ease, background-color  0.3s ease;
+}
+
+.mini-barra-lateral{
+    width: 80px;
+
+}
+
+.barra-lateral span{
+    width: 100px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0,5s;
+
+}
+
+.barra-lateral span.oculto{
+    opacity: 0;
+    width: 0;
+}
+
+
+/* nome da pagina*/
+.barra-lateral .nomedapagina{
+    width: 100%;
+    height: 45px;
+    color: var(--color-texto);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-lateral .nomedapagina ion-icon{
+    min-width: 50px;
+    font-size: 40PX;
+    cursor: pointer;
+}
+
+.barra-lateral .nomedapagina span{
+    margin: 5px;
+    font-size: 25px;
+
+}
+
+
+/* botão ih la ele */
+
+.barra-lateral .botão{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-style: 10px;
+    background-color: var(--color-botão);
+    color: var(--color-botão-texto);
+}
+
+
+.barra-lateral .botão ion-icone{
+    min-height: 50px;
+    font-size: 25px;
+}
+
+/* menu completo */
+
+.barra-lateral .navegar li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.barra-lateral .navegar a{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color:var(--color-texto-menu);
+
+}
+
+.barra-lateral .navegar a:hover{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
+.barra-lateral .navegar ion-icon{
+    min-width: 50px;
+    font-size: 20px;
+
+}
+
+/* linea*/
+
+.barra-lateral .linea{
+    width: 100px;
+    height: 1px;
+    background-color: var(--color-linea);
+}
+
+
+/* Modo fuga da policia */
+
+.barra-lateral .modopreto{
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra-lateral .modopreto .info{
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--color-texto-menu);
+}
+
+.barra-lateral .modopreto ion-icon{
+    width: 50px;
+    font-size:20px;
+
+}
+
+/* switch*/
+
+.barra-lateral .modopreto .switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+
+}
+
+.barra-lateral .modopreto .base{
+    position: relative;
+    background-color: var(--color-switch-base);
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+.barra-lateral .modopreto.circulo{
+    position: absolute;
+    background-color: var(--color-switch-circulo);
+    width: 18px;
+    height: 90%;
+    border-radius: 50px;
+    left: 2px;
+    transition: left 0.5 ease;
+}
+
+.barra-lateral .modopreto .circulo .dark-mode{
+   left: 15px; 
+}
